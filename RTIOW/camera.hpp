@@ -36,18 +36,14 @@ public:
         w = unit_vec(look_from - look_at);
         u = unit_vec(cross(v_up, w));
         v = cross(w, u);
-        lower_left_corner = origin - focus_dist * (
-                                                   half_width * u
-                                                   + half_height * v
-                                                   + w
-                                                   );
+        lower_left_corner = origin  - half_width*focus_dist*u -half_height*focus_dist*v - focus_dist*w;
         horiz = 2 * half_width * focus_dist * u;
         vert = 2 * half_height * focus_dist * v;
     }
     ray get_ray(float s, float t) {
         vec3 rd = lens_radius * random_in_unit_disk();
         vec3 offset = u * rd.x() + v * rd.y();
-        return ray(origin,
+        return ray(origin + offset,
                    lower_left_corner + s * horiz + t * vert - origin - offset);
     }
     vec3 origin;
