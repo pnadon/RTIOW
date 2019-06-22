@@ -15,7 +15,7 @@ class sphere: public hitable {
 public:
     sphere() {}
     sphere(vec3 cen, float r, material *m): center(cen), radius(r), mat_ptr(m) {};
-    virtual bool hit(const ray&, float t_min, float t_max, hit_record& rec) const;
+    virtual bool hit(const ray& r, float t_min, float t_max, hit_record& rec) const;
     virtual bool bounding_box(float t0, float t1, aabb& box) const;
     vec3 center;
     float radius;
@@ -39,6 +39,7 @@ bool sphere::hit(const ray& r, float t_min, float t_max, hit_record& rec) const 
         if (temp < t_max && temp > t_min) {
             rec.t = temp;
             rec.p = r.point(rec.t);
+            get_sphere_uv((rec.p - center) / radius, rec.u, rec.v);
             rec.normal = (rec.p - center) / radius;
             rec.mat_ptr = mat_ptr;
             return true;
@@ -47,6 +48,7 @@ bool sphere::hit(const ray& r, float t_min, float t_max, hit_record& rec) const 
         if (temp < t_max && temp > t_min) {
             rec.t = temp;
             rec.p = r.point(rec.t);
+            get_sphere_uv((rec.p - center) / radius, rec.u, rec.v);
             rec.normal = (rec.p - center) / radius;
             rec.mat_ptr = mat_ptr;
             return true;

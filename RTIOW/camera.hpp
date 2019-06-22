@@ -29,6 +29,8 @@ public:
            float focus_dist,
            float t0,
            float t1) {
+        time0 = t0;
+        time1 = t1;
         lens_radius = aperture / 2;
         float theta = vfov * M_PI / 180;
         float half_height = tan(theta / 2);

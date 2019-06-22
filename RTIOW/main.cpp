@@ -42,15 +42,14 @@ int main() {
     int ny = 500;
     int ns = 10;
     std::cout << "P3\n" << nx << " " << ny << "\n255\n";
-    hitable *world;
     
-    world = random_scene();
+    hitable *world = random_scene();
     
-    vec3 look_from(278, 278, -800);
-    vec3 look_at(278, 278, 0);
+    vec3 look_from(13, 2, 3);
+    vec3 look_at(0, 0, 0);
     float dist_to_focus = 10.0;
-    float aperture = 0.0;
-    float vfov = 10.0;
+    float aperture = 0.1;
+    float vfov = 20.0;
     
     camera cam(look_from,
                look_at,

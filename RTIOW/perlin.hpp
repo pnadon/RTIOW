@@ -34,7 +34,7 @@ inline float perlin_interp(vec3 c[2][2][2], float u, float v, float w) {
 class perlin {
 public:
     float noise(const vec3& p) const {
-        float u = p.x() - float(p.x());
+        float u = p.x() - floor(p.x());
         float v = p.y() - floor(p.y());
         float w = p.z() - floor(p.z());
         int i = floor(p.x());
@@ -71,7 +71,7 @@ public:
 
 static vec3* perlin_generate() {
     vec3 * p = new vec3[256];
-    for (int i = 0; i < 256; i++) {
+    for (int i = 0; i < 256; ++i) {
         p[i] = unit_vec(vec3(-1 + 2 * drand48(),
                              -1 + 2 * drand48(),
                              -1 + 2 * drand48()));

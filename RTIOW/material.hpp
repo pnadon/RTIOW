@@ -40,7 +40,7 @@ vec3 random_in_unit_sphere() {
     vec3 p;
     do {
         p = 2.0 * vec3(drand48(), drand48(), drand48()) - vec3(1, 1, 1);
-    } while (p.sqr_length() >= 1.0);
+    } while (dot(p, p) >= 1.0);
     return p;
 }
 
@@ -111,21 +111,20 @@ public:
         else {
             outward_normal = rec.normal;
             ni_over_nt = 1.0 / ref_idx;
-            cosine = -dot(r_in.direction(),
-                          rec.normal) / r_in.direction().length();
+            cosine = -dot(r_in.direction(), rec.normal) / r_in.direction().length();
         }
         if (refract(r_in.direction(), outward_normal, ni_over_nt, refracted)) {
             reflect_prob = schlick(cosine, ref_idx);
         }
         else {
-            scattered = ray(rec.p, reflected, r_in.time());
+            scattered = ray(rec.p, reflected);
             reflect_prob = 1.0;
         }
         if (drand48() < reflect_prob) {
-            scattered = ray(rec.p, reflected, r_in.time());
+            scattered = ray(rec.p, reflected);
         }
         else {
-            scattered = ray(rec.p, refracted, r_in.time());
+            scattered = ray(rec.p, refracted);
         }
         return true;
     }
