@@ -8,7 +8,6 @@
 
 #ifndef camera_hpp
 #define camera_hpp
-
 #include "ray.hpp"
 
 vec3 random_in_unit_disk() {
@@ -27,7 +26,9 @@ public:
            float vfov,
            float aspect,
            float aperture,
-           float focus_dist) {
+           float focus_dist,
+           float t0,
+           float t1) {
         lens_radius = aperture / 2;
         float theta = vfov * M_PI / 180;
         float half_height = tan(theta / 2);
@@ -43,14 +44,16 @@ public:
     ray get_ray(float s, float t) {
         vec3 rd = lens_radius * random_in_unit_disk();
         vec3 offset = u * rd.x() + v * rd.y();
+        float time = time0 + drand48() * (time1 - time0);
         return ray(origin + offset,
-                   lower_left_corner + s * horiz + t * vert - origin - offset);
+                   lower_left_corner + s * horiz + t * vert - origin - offset, time);
     }
     vec3 origin;
     vec3 lower_left_corner;
     vec3 horiz;
     vec3 vert;
     vec3 u, v, w;
+    float time0, time1;
     float lens_radius;
 };
 

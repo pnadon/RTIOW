@@ -23,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A472BD122BD636F00E19CD7 /* aabb.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = aabb.hpp; sourceTree = "<group>"; };
 		4A6625F922824EEF00094017 /* RTIOW */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RTIOW; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6625FC22824EEF00094017 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4AC2ED6C22A8887D008A78C2 /* vec3.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vec3.hpp; sourceTree = "<group>"; };
@@ -32,6 +33,14 @@
 		4AC2ED7522A8AA6A008A78C2 /* hitablelist.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hitablelist.hpp; sourceTree = "<group>"; };
 		4AC2ED7622A8AF99008A78C2 /* camera.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = camera.hpp; sourceTree = "<group>"; };
 		4AC2ED7822A8C1C1008A78C2 /* material.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = material.hpp; sourceTree = "<group>"; };
+		4AC9B35A22BD6A9900B4D9A9 /* moving_sphere.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = moving_sphere.hpp; sourceTree = "<group>"; };
+		4AC9B35B22BD704A00B4D9A9 /* bvh.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = bvh.hpp; sourceTree = "<group>"; };
+		4AC9B35D22BD8C2E00B4D9A9 /* texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = texture.hpp; sourceTree = "<group>"; };
+		4AC9B35F22BD940100B4D9A9 /* scenes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = scenes.hpp; sourceTree = "<group>"; };
+		4AC9B36222BD967400B4D9A9 /* perlin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = perlin.hpp; sourceTree = "<group>"; };
+		4AC9B36522BDA8F800B4D9A9 /* rect.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rect.hpp; sourceTree = "<group>"; };
+		4AC9B36822BDB5AF00B4D9A9 /* box.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = box.hpp; sourceTree = "<group>"; };
+		4AC9B36B22BDC09E00B4D9A9 /* constant_medium.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = constant_medium.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,15 @@
 				4AC2ED7522A8AA6A008A78C2 /* hitablelist.hpp */,
 				4AC2ED7622A8AF99008A78C2 /* camera.hpp */,
 				4AC2ED7822A8C1C1008A78C2 /* material.hpp */,
+				4A472BD122BD636F00E19CD7 /* aabb.hpp */,
+				4AC9B35A22BD6A9900B4D9A9 /* moving_sphere.hpp */,
+				4AC9B35B22BD704A00B4D9A9 /* bvh.hpp */,
+				4AC9B35D22BD8C2E00B4D9A9 /* texture.hpp */,
+				4AC9B35F22BD940100B4D9A9 /* scenes.hpp */,
+				4AC9B36222BD967400B4D9A9 /* perlin.hpp */,
+				4AC9B36522BDA8F800B4D9A9 /* rect.hpp */,
+				4AC9B36822BDB5AF00B4D9A9 /* box.hpp */,
+				4AC9B36B22BDC09E00B4D9A9 /* constant_medium.hpp */,
 			);
 			path = RTIOW;
 			sourceTree = "<group>";
