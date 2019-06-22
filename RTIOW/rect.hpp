@@ -67,7 +67,7 @@ public:
 };
 
 bool xz_rect::hit(const ray& r, float t0, float t1, hit_record& rec) const {
-    float t = (k - r.origin().z()) / r.direction().z();
+    float t = (k - r.origin().y()) / r.direction().y();
     if (t < t0 || t > t1) {
         return false;
     }
@@ -104,7 +104,7 @@ public:
 };
 
 bool yz_rect::hit(const ray& r, float t0, float t1, hit_record& rec) const {
-    float t = (k - r.origin().z()) / r.direction().z();
+    float t = (k - r.origin().x()) / r.direction().x();
     if (t < t0 || t > t1) {
         return false;
     }

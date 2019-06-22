@@ -30,26 +30,27 @@ vec3 color(const ray& r, hitable *world, int depth) {
         }
     }
     else {
-        vec3 unit_direction = unit_vec(r.direction());
-        float t = 0.5 * (unit_direction.y() + 1.0);
-        return (1.0 - t) * vec3(1.0, 1.0, 1.0) + t * vec3(0.5, 0.7, 1.0);
-        //return vec3(0, 0, 0);
+        //vec3 unit_direction = unit_vec(r.direction());
+        //float t = 0.5 * (unit_direction.y() + 1.0);
+        //return (1.0 - t) * vec3(1.0, 1.0, 1.0) + t * vec3(0.5, 0.7, 1.0);
+        
+        return vec3(0, 0, 0);
     }
 }
 
 int main() {
-    int nx = 500;
-    int ny = 500;
-    int ns = 10;
+    int nx = 1000;
+    int ny = 1000;
+    int ns = 1000;
     std::cout << "P3\n" << nx << " " << ny << "\n255\n";
     
-    hitable *world = random_scene();
+    hitable *world = final();
     
-    vec3 look_from(13, 2, 3);
-    vec3 look_at(0, 0, 0);
+    vec3 look_from(278, 278, -800);
+    vec3 look_at(278, 278, 0);
     float dist_to_focus = 10.0;
-    float aperture = 0.1;
-    float vfov = 20.0;
+    float aperture = 0.0;
+    float vfov = 40.0;
     
     camera cam(look_from,
                look_at,
