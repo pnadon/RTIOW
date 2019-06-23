@@ -43,9 +43,9 @@ vec3 color(const ray& r, hitable *world, int depth) {
 }
 
 int main() {
-    int nx = 200;
-    int ny = 200;
-    int ns = 40;
+    int nx = 800;
+    int ny = 800;
+    int ns = 1000;
     std::cout << "P3\n" << nx << " " << ny << "\n255\n";
     
     hitable *world = final();
