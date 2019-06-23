@@ -17,6 +17,10 @@
 
 const float COLOR_MAX = 255.99;
 
+int ppm_cap(int color) {
+    return (color > 255 ? 255 : color );
+}
+
 vec3 color(const ray& r, hitable *world, int depth) {
     hit_record rec;
     if (world->hit(r, 0.001, MAXFLOAT, rec)) {
@@ -39,9 +43,9 @@ vec3 color(const ray& r, hitable *world, int depth) {
 }
 
 int main() {
-    int nx = 1000;
-    int ny = 1000;
-    int ns = 1000;
+    int nx = 200;
+    int ny = 200;
+    int ns = 40;
     std::cout << "P3\n" << nx << " " << ny << "\n255\n";
     
     hitable *world = final();
@@ -77,7 +81,7 @@ int main() {
             int ir = int(COLOR_MAX * col[0]);
             int ig = int(COLOR_MAX * col[1]);
             int ib = int(COLOR_MAX * col[2]);
-            std::cout << ir << " " << ig << " " << ib << "\n";
+            std::cout << ppm_cap(ir) << " " << ppm_cap(ig) << " " << ppm_cap(ib) << "\n";
         }
     }
 }

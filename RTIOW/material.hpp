@@ -117,14 +117,14 @@ public:
             reflect_prob = schlick(cosine, ref_idx);
         }
         else {
-            scattered = ray(rec.p, reflected);
+            scattered = ray(rec.p, reflected, r_in.time());
             reflect_prob = 1.0;
         }
         if (drand48() < reflect_prob) {
-            scattered = ray(rec.p, reflected);
+            scattered = ray(rec.p, reflected, r_in.time());
         }
         else {
-            scattered = ray(rec.p, refracted);
+            scattered = ray(rec.p, refracted, r_in.time());
         }
         return true;
     }
@@ -151,7 +151,7 @@ public:
                          const hit_record& rec,
                          vec3& attenuation,
                          ray& scattered) const {
-        scattered = ray(rec.p, random_in_unit_sphere());
+        scattered = ray(rec.p, random_in_unit_sphere(), r_in.time());
         attenuation = albedo->value(rec.u, rec.v, rec.p);
         return true;
     }
