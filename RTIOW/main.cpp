@@ -2,6 +2,9 @@
 //  main.cpp
 //  RTIOW
 //
+// Renders the given scene by iterating through all pixels
+// of the resulting image.
+//
 //  Created by Philippe Nadon on 2019-05-07.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //
@@ -17,6 +20,11 @@
 
 const float COLOR_MAX = 255.99;
 
+/*
+* At the time of writing, there was an issue related to integer overflow
+* in areas where the brightness was very high. This method caps the brightness
+* at the maximum unsigned 8-bit value (255).
+*/
 int ppm_cap(int color) {
     return (color > 255 ? 255 : color );
 }

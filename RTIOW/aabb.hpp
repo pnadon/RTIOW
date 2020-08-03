@@ -2,6 +2,11 @@
 //  aabb.hpp
 //  RTIOW
 //
+// Axis-Aligned Bounding Boxes (AABBs) are an optimized way of checking for
+// collisions between two objects. The Axis-Aligned portion of the term
+// refers to how each object's bounding box is aligned to an axis and are thus
+// easily comparable to see if each object might intersect with eachother.
+//
 //  Created by Philippe Nadon on 2019-06-21.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

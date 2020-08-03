@@ -2,6 +2,8 @@
 //  perlin.hpp
 //  RTIOW
 //
+// A class which defines the classic perlin noise texture.
+//
 //  Created by Philippe Nadon on 2019-06-21.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

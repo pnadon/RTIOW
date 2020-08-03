@@ -2,6 +2,8 @@
 //  movable_sphere.hpp
 //  RTIOW
 //
+// Similar to the sphere class, but also accounts for movement through time.
+//
 //  Created by Philippe Nadon on 2019-06-21.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

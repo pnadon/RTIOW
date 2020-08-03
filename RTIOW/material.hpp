@@ -2,6 +2,9 @@
 //  lambertian.hpp
 //  RTIOW
 //
+// Defines various materials and how they interact with light,
+// such as reflective / refractive properties, and well as appearance (texture).
+//
 //  Created by Philippe Nadon on 2019-06-05.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

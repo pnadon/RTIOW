@@ -2,6 +2,9 @@
 //  texture.hpp
 //  RTIOW
 //
+// A collection of classes which define various textures.
+// These textures define how the surface of an object looks.
+//
 //  Created by Philippe Nadon on 2019-06-21.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

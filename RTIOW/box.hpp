@@ -2,6 +2,8 @@
 //  box.hpp
 //  RTIOW
 //
+// A box defined using rectangle subcomponents.
+//
 //  Created by Philippe Nadon on 2019-06-21.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

@@ -2,6 +2,9 @@
 //  scenes.hpp
 //  RTIOW
 //
+// A collection of predefined scenes, to be used in the main portion
+// of the program. Helps to keep the main portion relatively "clean".
+//
 //  Created by Philippe Nadon on 2019-06-21.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

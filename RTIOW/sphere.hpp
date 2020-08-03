@@ -2,6 +2,8 @@
 //  sphere.hpp
 //  RTIOW
 //
+// This class serves to define the geometry of a sphere.
+//
 //  Created by Philippe Nadon on 2019-06-05.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //
@@ -22,12 +24,18 @@ public:
     material *mat_ptr;
 };
 
+/*
+* Creates a bounding box, used to optimize when the sphere is checked for collisions.
+*/
 bool sphere::bounding_box(float t0, float t1, aabb& box) const {
     box = aabb(center - vec3(radius, radius, radius),
                center + vec3(radius, radius, radius));
     return true;
 }
 
+/*
+* Determines how light interacts with the surface of the sphere.
+*/
 bool sphere::hit(const ray& r, float t_min, float t_max, hit_record& rec) const {
     vec3 oc = r.origin() - center;
     float a = dot(r.direction(), r.direction());

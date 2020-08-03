@@ -2,6 +2,10 @@
 //  ray.hpp
 //  RTIOW
 //
+// A ray builds off of the definition of a vector, and defines
+// the trajectory of an object (presumably light) as a function
+// of time.
+//
 //  Created by Philippe Nadon on 2019-06-05.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

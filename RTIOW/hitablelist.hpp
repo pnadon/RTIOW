@@ -2,6 +2,9 @@
 //  hitablelist.hpp
 //  RTIOW
 //
+// The hitable_list keeps track of what light can hit
+// or otherwise interact with. Objects not in this list are ignored.
+//
 //  Created by Philippe Nadon on 2019-06-05.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

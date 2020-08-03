@@ -2,6 +2,9 @@
 //  camera.hpp
 //  RTIOW
 //
+// Defines the "camera's" properties, such as aperture and position.
+// The camera simply emulates how one would view the scene using a real camera.
+//
 //  Created by Philippe Nadon on 2019-06-05.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

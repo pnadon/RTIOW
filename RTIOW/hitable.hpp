@@ -2,6 +2,10 @@
 //  hitable.hpp
 //  RTIOW
 //
+// Defines methods for objects which are hitable by light rays.
+// This includes geometric methods for rotating / translating the object,
+// as well as shader methods such as uv mapping and normals.
+//
 //  Created by Philippe Nadon on 2019-06-05.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

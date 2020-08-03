@@ -2,6 +2,10 @@
 //  rect.hpp
 //  RTIOW
 //
+// Defines the 2D planes that make up a box (x-y, x-z, y-z).
+// These planes are all defined individually since light
+// interacts differently based on what side of the box it hits.
+//
 //  Created by Philippe Nadon on 2019-06-21.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

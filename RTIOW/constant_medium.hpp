@@ -2,6 +2,9 @@
 //  constant_medium.hpp
 //  RTIOW
 //
+// Defines objects with "constant density", used primarily when the scene
+// allows the viewer to "see" the internals of the object, such as smoke.
+//
 //  Created by Philippe Nadon on 2019-06-21.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

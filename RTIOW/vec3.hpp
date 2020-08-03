@@ -2,6 +2,8 @@
 //  vec3.hpp
 //  RTIOW
 //
+// The vec3 class defines a vector and its methods, based on linear algebra.
+//
 //  Created by Philippe Nadon on 2019-06-05.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //

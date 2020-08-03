@@ -2,6 +2,10 @@
 //  bvh.hpp
 //  RTIOW
 //
+// Bounding Volume Hierarchy (BVH) is a method of grouping geometric objects
+// together using a tree datastructure to optimize operations performed
+// within a scene, such as ray tracing and collision detection.
+//
 //  Created by Philippe Nadon on 2019-06-21.
 //  Copyright © 2019 Philippe Nadon. All rights reserved.
 //
